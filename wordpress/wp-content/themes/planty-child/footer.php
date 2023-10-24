@@ -15,7 +15,7 @@
 		<?php if(!is_page(62)) {
 			echo '<img src="http://localhost/planty/PlantyVFinale/wordpress/wp-content/uploads/2023/10/Group-8.png" alt="Canettes de différentes tailles" class="footer">';
 		} ?>
-		<p>Mentions légales<p>
+		<a href="#">Mentions légales</a>
 	</footer><!-- #site-footer -->
 
 <?php wp_footer(); ?>
