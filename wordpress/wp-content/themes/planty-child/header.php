@@ -47,23 +47,12 @@
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'planty' ); ?></button>
 			<?php
-
-			if(is_user_logged_in()){
 				wp_nav_menu(
 				array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
 				)
 				);
-			}
-			else {
-				wp_nav_menu(
-					array(
-						'menu' => 'Menu-2',
-					)
-					);				
-			}
-			
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
