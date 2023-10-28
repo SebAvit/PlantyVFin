@@ -8,5 +8,12 @@ function theme_enqueue_styles()
 }
 
 
-
+add_filter( 'wp_nav_menu_items', 'add_extra_item_to_nav_menu', 10, 2 );
+function add_extra_item_to_nav_menu( $items, $args ) {
+    if (is_user_logged_in() && $args->menu == 2) {
+        $items .= '<li><a href="'. admin_url() .'">Admin</a></li>';
+    }
+    return $items;
+}
+apply_filters( 'wp_nav_menu_items', 'wp_nav_menu', $args->menu == 2);
 ?>
